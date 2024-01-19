@@ -8,6 +8,9 @@ on:
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: test-magiclog-dev
+  ECS_SERVICE: test-magiclog-dev
+  ECS_CLUSTER: test-magiclog-dev
+  ECS_TASK_DEFINITION: .aws/td.json
 
 jobs:
   deploy:
