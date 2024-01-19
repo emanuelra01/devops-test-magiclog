@@ -1,5 +1,5 @@
 resource "aws_security_group" "sg" {
-  name   = "ecs-sg"
+  name   = "default"
   vpc_id = aws_vpc.main.id
 
   ingress {
