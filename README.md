@@ -19,13 +19,19 @@ You'll need:
 ### Attention !!!
 
 **First you must create the infrastructure ECR and ECS, otherwise Github actions will send an error.**
+
 **Github Actions secrets and variables**
+
 You will need configure the following Repository secrets inside Settings-Actions secrets and variables
+
 AWS_ACCESS_KEY_ID
+
 AWS_SECRET_ACCESS_KEY
+
 **You should have installed aws client, curl and terraform**
 
 **You will have to configure your aws profile dev**
+
 Inside your file ~/.aws/config
 
 [profile dev]
@@ -41,21 +47,23 @@ aws_secret_access_key = XXXX
 **You will need to create the ECR and ECS infrastructure**
 
 **ECR creation**
-Inside your directory ./terraform/dev-ecr/  run the following commands:
 
-terraform init
-terraform plan
-terraform apply
+- Inside your directory ./terraform/dev-ecr/  run the following commands:
+
+    1. terraform init
+    2. terraform plan
+    3. terraform apply
 
 **ECS creation**
-Inside your directory ./terraform/dev-ecs/  run the following commands:
+- Inside your directory ./terraform/dev-ecs/  run the following commands:
 
-terraform init
-terraform plan
-terraform apply
+    1. terraform init
+    2. terraform plan
+    3. terraform apply
 
 **Github actions work on branches main, feature/create-**
 
 
 **Commands to test the ECS service**
+
 curl -X POST http://ECS Public IP:5000/birthday -H 'Content-Type: application/json' -d '{"name": "Pruebas test", "date":"1990-01-18"}'
