@@ -1,9 +1,9 @@
 ############CREATING A ECS CLUSTER#############
 
 resource "aws_ecs_cluster" "cluster" {
-  name = "cluster"
+  name = "test-magiclog-dev"
   setting {
-    name  = "test-magiclog-dev"
+    name  = "containerInsights"
     value = "enabled"
   }
 }
