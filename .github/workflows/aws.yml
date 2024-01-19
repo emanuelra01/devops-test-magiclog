@@ -11,6 +11,7 @@ env:
   ECS_SERVICE: test-magiclog-dev
   ECS_CLUSTER: test-magiclog-dev
   ECS_TASK_DEFINITION: .aws/td.json
+  CONTAINER_NAME: test-magiclog-dev
 
 jobs:
   deploy:
