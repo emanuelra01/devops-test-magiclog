@@ -34,7 +34,7 @@ def birthday():
             birdate = datetime.strptime(getdate, '%Y-%m-%d')
             today = datetime.now()
             diff = relativedelta.relativedelta(today, birdate)
-            output["data"] = data["name"] + "'s " + str(diff.years) + " years old"
+            output["data"] = data["name"] + "'s " + str(diff.years) + " YEARS OLD"
         except ValueError:
             output["error"] = "Incorrect data format, should be YYYY-MM-DD"
             #raise ValueError("Incorrect data format, should be YYYY-MM-DD")
